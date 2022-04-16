@@ -155,3 +155,8 @@ void SortContact(struct contact* ps)
 	qsort(ps->data, ps->size, sizeof(ps->data[0]), Cmp_Name);
 	printf("ÅÅÐò³É¹¦\n");
 }
+void FreeContact(struct contact* ps)
+{
+	free(ps->data);
+	ps->data = NULL;
+}

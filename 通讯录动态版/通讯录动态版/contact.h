@@ -21,8 +21,8 @@ struct People_Init
 struct contact
 {
 	struct People_Init* data;//通讯录
-	int size;//计算添加的个数
-	int capacity;//计算通讯录最大容量
+	int size;//记录添加的个数
+	int capacity;//记录通讯录最大容量
 };
 enum Opinion
 {
@@ -43,3 +43,4 @@ void DelContact(struct contact* ps);
 void SearchContact(const struct contact* ps);
 void ModifyContact(const struct contact* ps);
 void SortContact(struct contact* ps);
+void FreeContact(struct contact* ps);
