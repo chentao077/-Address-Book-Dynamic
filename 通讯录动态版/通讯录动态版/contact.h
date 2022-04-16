@@ -2,7 +2,7 @@
 #include<string.h>
 #include<stdlib.h>
 
-#define Max      1000
+
 #define Name_max 10
 #define Sex_max  5
 #define Tele_max 12
@@ -20,8 +20,9 @@ struct People_Init
 //通讯录类
 struct contact
 {
-	struct People_Init data[Max];//通讯录
+	struct People_Init* data;//通讯录
 	int size;//计算添加的个数
+	int capacity;//计算通讯录最大容量
 };
 enum Opinion
 {

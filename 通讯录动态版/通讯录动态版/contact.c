@@ -14,6 +14,7 @@ int main()
 	//创建通讯录
 	struct contact con;
 	//初始化通讯录
+	//通讯录先开辟3个空间，不够再开辟两个空间
 	InitContact(&con);
 	int input = 0;
 	do
@@ -54,6 +55,8 @@ int main()
 			SortContact(&con);
 			break;
 		case Exit:
+			//销毁通讯录（释放动态开辟的内存）
+			FreeContact(&con);
 			printf("退出通讯录\n");
 			break;
 		default:
